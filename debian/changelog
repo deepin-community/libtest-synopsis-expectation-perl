@@ -1,5 +1,22 @@
-template-repository (1.0-1) unstable; urgency=medium
+libtest-synopsis-expectation-perl (0.12-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Move libmodule-build-perl from Build-Depends-Indep to Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.1, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 14 Oct 2022 12:13:57 +0100
+
+libtest-synopsis-expectation-perl (0.12-2) unstable; urgency=medium
+
+  * declare compliance with Debian Policy 4.6.0
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 27 Aug 2021 12:54:40 +0200
+
+libtest-synopsis-expectation-perl (0.12-1) unstable; urgency=low
+
+  * initial packaging release;
+    closes: bug#988984
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 22 May 2021 17:28:23 +0200
