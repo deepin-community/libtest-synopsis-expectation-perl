@@ -1,15 +1,30 @@
-Source: template-repository
-Section: unknown
+Source: libtest-synopsis-expectation-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+Section: perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+ libmodule-build-perl,
+Build-Depends-Indep:
+ libppi-perl <!nocheck>,
+ perl,
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-synopsis-expectation-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-synopsis-expectation-perl.git
+Homepage: https://metacpan.org/pod/Test::Synopsis::Expectation
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-perl
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libtest-synopsis-expectation-perl
+Architecture: all
+Depends:
+ libppi-perl,
+ ${misc:Depends},
+ ${perl:Depends},
+Description: test that SYNOPSIS code produces expected results
+ Test::Synopsis::Expectation checks
+ that a perl module's SYNOPSIS section is syntactically correct,
+ and will also check that it produces the expected results,
+ based on annotations you add in comments.
